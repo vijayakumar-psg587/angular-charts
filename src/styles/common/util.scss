@@ -1,0 +1,84 @@
+
+$global_content_height: 66%;
+
+@mixin divide-sections(
+  $sectionSize: 2,
+  $inputHeight: 76%,
+  $heightSec) {
+  display: grid;
+  @if ($sectionSize == 2) {
+    grid-template-rows: 60% 40%;
+    grid-template-columns: $heightSec;
+  } @else if($sectionSize == 3){
+    grid-template-rows: 40% 40% 20%;
+    grid-template-columns: $heightSec;
+  }
+  @else {
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-columns: $heightSec;
+  }
+}
+
+
+@mixin slide-left-to-right {
+  animation: slide-ltr 1s ease-in forwards;
+}
+
+@keyframes slide-ltr {
+  0%{
+    -webkit-transform:translateZ(0) translateX(0);
+    -moz-transform:translateZ(0) translateX(0);
+    transform:translateZ(-160px) translateX(-160px);
+
+  }50% {
+       -webkit-transform:translateZ(0) translateX(0);
+       -moz-transform:translateZ(0) translateX(0);
+       transform:translateZ(50px) translateX(50px);
+
+  }
+  100%{
+    -webkit-transform:translateZ(160px) translateX(-100px);
+    -moz-transform:translateZ(160px) translateX(-100px);
+    transform:translateZ(160px) translateX(-100px);
+    display: inherit;
+  }
+
+}
+@-webkit-keyframes slide-ltr {
+  0%{
+    -webkit-transform:translateZ(0) translateX(0);
+    -moz-transform:translateZ(0) translateX(0);
+    transform:translateZ(0) translateX(0);
+    display:none;
+  }
+  100%{
+    -webkit-transform:translateZ(160px) translateX(-100px);
+    -moz-transform:translateZ(160px) translateX(-100px);
+    transform:translateZ(160px) translateX(-100px);
+    display: inherit;
+  }
+
+}
+@-moz-keyframes slide-ltr {
+  0%{
+    -webkit-transform:translateZ(0) translateX(0);
+    -moz-transform:translateZ(0) translateX(0);
+    transform:translateZ(0) translateX(0);
+    display:none;
+  }
+  100%{
+    -webkit-transform:translateZ(160px) translateX(-100px);
+    -moz-transform:translateZ(160px) translateX(-100px);
+    transform:translateZ(160px) translateX(-100px);
+    display: inherit;
+  }
+
+}
+
+@mixin chart-body-data {
+  width: 96.8%;
+  height: 93.5%;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 1fr 4fr;
+}

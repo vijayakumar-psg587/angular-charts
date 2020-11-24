@@ -1,0 +1,10 @@
+@import "src/styles/common/util.scss";
+
+.scatter-chart-card {
+  @include chart-body-data();
+}
+
+.chart-div {
+  width: 69vw !important;
+  height: 53vh !important;
+}

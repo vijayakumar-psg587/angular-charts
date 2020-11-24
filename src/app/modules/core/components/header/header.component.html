@@ -1,0 +1,17 @@
+<div class="header-div">
+  <mat-toolbar color="primary" class="toolbar-header">
+    <section id="menu">
+      <button  mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </section>
+    <section id="title">
+      <span>{{headerTitle}}</span>
+    </section>
+
+    <section id="profile">
+      <mat-icon id="account" *ngIf="showAccount">account_circle</mat-icon>
+    </section>
+
+  </mat-toolbar>
+</div>

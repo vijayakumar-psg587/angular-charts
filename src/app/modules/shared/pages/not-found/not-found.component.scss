@@ -1,0 +1,56 @@
+@import "src/styles/common/util.scss";
+@import "src/styles/common/core.scss";
+
+.no-data-div {
+  display: grid;
+  grid-template-columns: 45% 10% 45%;
+  grid-template-rows: 100%;
+  @include inherit-data();
+}
+
+.no-data-icon {
+  grid-column: 1/ span 1;
+  align-items: center;
+  align-content: center;
+  align-self: stretch;
+}
+.no-data-image{
+  height: 79%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  //@include slide-left-to-right();
+  animation: fadeInRight 1s ease-in forwards;
+  transition: transform 1s ease-in-out;
+  &:hover {
+    transform: rotate(360deg);
+  }
+}
+
+.no-data-content {
+  grid-column: 3/ span 1;
+  word-wrap: break-word;
+  display: inline-grid;
+}
+
+.no-data-content-div {
+  position: relative;
+  text-align: center;
+  align-self: center;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 10%;
+  animation: fadeInLeft 1s ease-in forwards;
+}
+
+.middle-section {
+  grid-column: 2/ span 1;
+  //border: 1px solid green;
+  //border-radius: 7px 7px 7px 7px;
+  margin-left: 30%;
+  background: repeating-radial-gradient(black, transparent 100px);
+  margin-right: 11%;
+  width: 4%;
+  //box-shadow: -1px 1px 2px 1px;
+}

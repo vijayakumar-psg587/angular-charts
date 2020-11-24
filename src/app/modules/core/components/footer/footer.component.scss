@@ -1,0 +1,12 @@
+@import "src/styles/common/core";
+
+.footer-div{
+  @include header-footer-div($headerFlag: 'false');
+}
+
+.toolbar-footer {
+  display: grid;
+  grid-template-rows: 100%;
+  padding: 0;
+  grid-template-columns: 40% 60%;
+}

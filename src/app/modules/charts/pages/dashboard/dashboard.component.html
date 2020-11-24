@@ -1,0 +1,17 @@
+<div class="dashboard">
+  <mat-tab-group class="chart-tab-group" (selectedTabChange)="tabChangeEvent($event)" [backgroundColor]="tabBackground">
+    <ng-container *ngFor="let chart of charts">
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon class="example-tab-icon">{{chart['linkedIcon']}}</mat-icon>
+          {{chart.label}}
+        </ng-template>
+
+        <ng-template #vf appChartDirective [tabDetails]="matTabSelected()">
+
+        </ng-template>
+      </mat-tab>
+    </ng-container>
+  </mat-tab-group>
+</div>
+

@@ -1,0 +1,47 @@
+$height-content-init: 90%;
+
+@mixin header-footer-div(
+  $widthVal: 100%,
+  $headerFlag,
+  $header_heightVal: 20%,
+  $footer_heightVal: 10%) {
+  width: $widthVal;
+  @if $headerFlag == 'false' {
+    position: fixed;
+    left:0;
+    bottom: 0;
+  }
+  @else {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+}
+
+@mixin content-init-body {
+  height: $height-content-init;
+}
+
+@mixin inherit-data ($input_width: inherit) {
+  width:$input_width;
+  height: $height-content-init;
+}
+
+@mixin dialog-config(
+  $dialog-split-count: 3
+  )
+{
+  display: grid;
+  @if $dialog-split-count == 3 {
+    grid-template-rows: 20% 60% 20% ;
+  }
+  @else if $dialog-split-count == 2 {
+    grid-template-rows: 50% 50%;
+  }
+}
+
+@mixin dialog-content-config(){
+  width: 100%;
+  height: 100%;
+
+}

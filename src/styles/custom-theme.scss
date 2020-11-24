@@ -1,0 +1,23 @@
+@import "node_modules/@angular/material/theming";
+
+@include mat-core();
+
+$custom-theme-primary: mat-palette($mat-green, 700, 500, 300);
+$custom-theme-accent: mat-palette($mat-pink, A200, A100, A400);
+
+$custom-app-theme: mat-light-theme((
+  color: (
+    primary: $custom-theme-primary,
+    accent: $custom-theme-accent,
+  )
+));
+
+.background-color-primary {
+  background-color: mat-color($custom-theme-primary);
+}
+
+.background-color-accent {
+  background-color: mat-color($custom-theme-accent);
+}
+
+@include angular-material-theme($custom-app-theme);

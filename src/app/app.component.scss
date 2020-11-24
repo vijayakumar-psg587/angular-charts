@@ -1,0 +1,11 @@
+@import "src/styles/common/util";
+
+$margin :( "m-left":10%, "m-top": 10%);
+
+.body-wrapper {
+  width: (100% - map-get($margin, m-left));
+  height: $global_content_height;
+  margin-left: map-get($margin, m-left);
+  margin-top: map-get($margin, m-top);
+  position: absolute;
+}
